@@ -1,0 +1,15 @@
+$('.testimonials-container').owlCarousel({
+    loop:true,
+    autoplay:true,
+    autoplayTimeout:3000,
+    margin:10,
+    nav:true,
+    responsive:{
+        540:{
+            items:1
+        },
+        740:{
+            items:3
+        }   
+    }
+})
