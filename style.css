@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #5f687b;
+    --hover-color: #10bc69;
+    --bg-color:#f8f8f8;
+    --bg-text:#5b617011;
+}
+
+body {
+    padding-top: 70px;
+}
+
+nav h3{
+    color: var(--text-color);
+    font-weight: 780;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: none; 
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+nav a, nav .dropdown{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+    padding-top: 8px;
+}
+
+nav a:hover, .dropdown-menu .dropdown-item:hover,
+.deep-dropdown ul .deep-dropdown-item:hover{
+    color: var(--hover-color);
+    background-color: #fff; 
+
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; 
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute; 
+    z-index: 1000; 
+}
+
+.deep-dropdown {
+    position: relative;
+}
+
+.deep-dropdown ul {
+    display: none;
+    position: absolute; 
+    right: 110%; /* Align to the right */
+    top: 0; /* Align vertically */
+    width: 165px; 
+    padding: 10px; 
+    list-style-type: none;
+    background-color: white; /* Ensure background color is white */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for deep dropdown */
+}
+
+.deep-dropdown:hover ul {
+    display: block; 
+}
+
+.dropdown-menu .dropdown-item,
+.deep-dropdown ul .deep-dropdown-item,
+.cards h3, .about h2, .heading div h3, .testimonials-container .testimonial-card h4,
+.testimonials-container .testimonial-card p,
+.icons h5{
+    color: var(--text-color);
+}
+
+.call-to-action,.call-to-action button{
+    background-color: var(--hover-color);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 96px; 
+    padding: 20px; 
+}
+
+.hero img {
+    height: 570px;
+    width: 513px; 
+    margin-right: 105px;
+}
+
+
+.about img{
+    width: 570px;
+    height: 385px;
+}
+
+img.up-down {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 2s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px);}
+}
+
+.heading h1{
+    color: var(--text-color);
+    font-weight: 650;
+}
+
+.heading{
+    margin: 96px 105px ;
+}
+
+.heading a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 650;
+    position: relative;
+    left: 70px;
+}
+
+.heading p{
+    color: var(--text-color);
+    font-size: larger;
+}
+
+.heading a:hover, .icons p:hover{
+    color: var(--hover-color);
+}
+
+.heading a i{
+    font-size: 40px;
+    font-weight:100;
+    color: var(--hover-color);
+    position: absolute;
+    left: -40px;
+}
+
+.cards .card1{
+    background-color:var(--bg-color);
+    border-radius: 0%;
+    margin: 0px 12px 60px 12px;
+    border: none;
+    transition: transform 0.5s ease;
+}
+
+.cards{
+    margin: 0px 105px;
+}
+
+.cards .card1 i{
+    font-size: 45px;
+    color: var(--hover-color);
+}
+
+.about h1{
+    color: var(--bg-text);
+}
+/* doubt1 */
+.card1:hover{
+    transform: scale(1.05);
+    h3{
+        color: var(--hover-color);
+    }
+}
+
+.margin{
+    margin-top: -40px;
+}
+
+.container .row .col-lg-4 .shadow{
+    margin-top: -60px;
+}
+
+.fs{
+    font-size: 16px;
+    line-height: 24px;
+}
+.count .countn{
+    font-size: 48px;
+    color: #10bc69;
+}
+
+.count p{
+    font-size: 15px;
+}
+
+.container-fluid .row .card:hover{
+    border: 1px solid #10bc69;
+    h3{
+        color: var(--hover-color);
+    }
+}
+
+.portfolio a{
+    text-decoration: none;
+    color: black;
+}
+
+.portfolio a:hover{
+    color: var(--hover-color);
+}
+
+.hidden{
+    visibility: hidden;
+}
+.row img:hover +.hidden{
+    visibility: visible;
+}
+
+.icon1{
+    border: 1px solid #5f687b46;
+    border-radius: 50%;
+    color:var(--text-color);
+}
+
+.icon1:hover{
+    cursor: pointer;
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+.footer3{
+    font-size:small;
+}
+
+.icon2{
+    border: 1px solid #5f687b ;
+    border-radius: 50%;
+    width: 14%;
+    height: 50%;
+    padding: 8px;
+    background-color: #10bc6928;
+    color: #10bc69;
+    border: none;
+}
+
+.ft1 .position-absolute{
+    right: 70px;
+    top: 0;
+}
